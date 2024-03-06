@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: like-service
+    name: user-service
   h2:
     console:
       enabled: true
@@ -14,8 +14,9 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-  main:
-    allow-bean-definition-overriding: true
+  redis:
+    host: 127.0.0.1
+    port: 6379
 
 eureka:
   instance:
@@ -26,8 +27,10 @@ eureka:
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka
 
-mailbox-auto-config:
-  option: "on"
-  access-key-check: "ture"
-  logging: "on"
-  security: "on"
+jwt:
+  secret-key: secret-key-one-two-dear-my-x-it-will-be-change-next-time
+  token-validity-in-sec: 32400
+  refresh-token-validity-in-sec: 604800
+
+access-id: server-access-id
+access-key: server-access-key
