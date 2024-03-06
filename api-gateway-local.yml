@@ -81,6 +81,17 @@ spring:
                 preLogger: true
                 postLogger: true
 
+        - id: follow-service
+          uri: lb://FOLLOW-SERVICE
+          predicates:
+            - Path=/follow-service/**
+          filters:
+            - name: CustomFilter
+            - name: LoggingFilter
+              args:
+                baseMessage: Spring Cloud Gateway LoggingFilter
+                preLogger: true
+                postLogger: true
 
 jwt:
   secret-key: secret-key-one-two-will-be-change-next-time
