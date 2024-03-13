@@ -16,6 +16,9 @@ spring:
     show-sql: true
   main:
     allow-bean-definition-overriding: true
+  redis:
+    host: 127.0.0.1
+    port: 6379
 
 eureka:
   instance:
