@@ -45,3 +45,9 @@ mailbox-auto-config:
   access-key-check: "ture"
   logging: "on"
   security: "on"
+
+grpc:
+  client:
+    user:
+      address: 'static://127.0.0.1:9090'
+      negotiation-type: plaintext
