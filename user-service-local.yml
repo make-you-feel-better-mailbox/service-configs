@@ -44,3 +44,7 @@ oauth2:
     resource-uri: https://www.googleapis.com/oauth2/v2/userinfo
     before-uri: https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?
     after-uri: response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&service=lso&o2v=1&theme=glif&flowName=GeneralOAuthFlow
+
+grpc:
+  server:
+    port: 9090
